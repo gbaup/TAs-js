@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="script.js">
+    </script>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+
+        .inputBox {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 10px;
+
+        }
+
+        .error {
+            display: block;
+            color: red;
+        }
+
+    </style>
+
+</head>
+<body>
+    <form action="">
+        <div class="inputBox">
+            <input type="text" id="name" placeholder="Name">
+        </div>
+        <div class="inputBox">
+            <input type="email" id="email" placeholder="Email" onkeydown="checkEmail()">
+            <p class="error" id="emailError">Error!</p>
+        </div>
+        <div class="inputBox">
+            <input type="password" id="password" placeholder="Password" onkeydown="checkPassword()">
+            <p class="error" id="passwordError">Error!</p>
+        </div>
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+</body>
+</html>
